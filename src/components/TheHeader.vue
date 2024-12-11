@@ -1,10 +1,17 @@
 <template>
     <div>
+        <h1 :class="classVar">
+            Vai corinthians
+        </h1>
 
+        <p :class="['text', 'title']">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+             Maiores repellat est quae nostrum ex accusantium quam sequi obcaecati, dolore quo quasi explicabo itaque magni unde repudiandae aliquid molestias! Cum, libero!
+        </p>
 
         <div 
             v-for="obj, index in todos" 
-            v-bind:key="obj.id"
+            :key="obj.id"
         >   
             <img
                 v-if="obj.imgSrc"
@@ -20,6 +27,8 @@
         name: 'App',
         data() {
             return {
+                classVar: 'title',
+                pClass: 'text',
                 todos: [
                     {
                         "userId": 1,
@@ -60,6 +69,14 @@
 </script>
 
 <style>
+    .title {
+        font-size: 40px;
+        color: red; 
+    }
+    .text {
+        font-size: 16px;
+        color: blue;
+    }
     .header {
         background-color: black;
         color: white;
