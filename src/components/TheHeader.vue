@@ -1,4 +1,16 @@
 <template>
+
+   <div>
+        <button v-on:click="onClick()">
+            Palmeiras não tem mundial
+        </button>
+   </div>
+   <br>
+
+   <div @mouseover="onMouseover">
+        Mouse Over
+   </div>
+
    <div>
         <div>
 
@@ -68,6 +80,15 @@
                sports: 'footbal',
                newsletter: '',
                contract: false
+            }
+        },
+
+        methods: {
+            onClick() {
+                console.log('Clicou aqui otario')
+            },
+            onMouseover() {
+                console.log('Mouse Over')
             }
         }
     }
